@@ -17,7 +17,7 @@ const ContactForm = () => {
   const handleSubmit = async (values, actions) => {
     try {
       await dispatch(addContact(values)).unwrap();
-      actions.resestForm();
+      actions.resetForm();
     } catch (e) {
       console.error(e);
     }
