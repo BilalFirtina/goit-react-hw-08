@@ -1,12 +1,14 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
+import Navigation from "../Navigation/Navigation";
 
 const AppBar = () => {
   return (
-    <nav>
-      <div>Home</div>
-      <div>Register</div>
-      <div>Log In</div>
-    </nav>
+    <header>
+      <div></div>
+      <div>Phonebook</div>
+      <Navigation />
+    </header>
   );
 };
 
