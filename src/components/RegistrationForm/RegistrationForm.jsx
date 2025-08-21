@@ -13,10 +13,10 @@ const schema = Yup.object({
 const RegistrationForm = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const handleSubmit = async (values, { setSubmitting, resetform }) => {
+  const handleSubmit = async (values, { setSubmitting, resetForm }) => {
     try {
       await dispatch(registerUser(values)).unwrap();
-      resetform();
+      resetForm();
       navigate("/contacts");
     } catch (e) {
       console.error(e);
