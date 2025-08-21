@@ -5,7 +5,7 @@ import Layout from "../Layout/Layout";
 import RestrictedRoute from "../RestrictedRoute";
 import Registration from "../../pages/Registration/Registration";
 import { useDispatch, useSelector } from "react-redux";
-import { selectIsRefreshing } from "../../redux/auth/selector";
+import { selectIsRefreshing } from "../../redux/auth/selectors";
 import { refreshUser } from "../../redux/auth/operations";
 import PrivateRoute from "../PrivateRoute";
 

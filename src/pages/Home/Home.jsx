@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { selectIsLoggedIn } from "../../redux/auth/selector";
+import { selectIsLoggedIn } from "../../redux/auth/selectors";
 import { Link } from "react-router-dom";
 
 const Home = () => {
