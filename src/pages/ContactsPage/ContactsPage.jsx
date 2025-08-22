@@ -5,7 +5,7 @@ import ContactForm from "../../components/ContactForm/ContactForm";
 import ContactList from "../../components/ContactList/ContactList";
 import Filter from "../../components/Filter/Filter";
 
-const Contacts = () => {
+const ContactsPage = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchContacts());
@@ -19,4 +19,4 @@ const Contacts = () => {
   );
 };
 
-export default Contacts;
+export default ContactsPage;
