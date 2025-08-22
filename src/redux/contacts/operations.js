@@ -1,9 +1,6 @@
 import axios from "axios";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
-// Aynı baseURL ayarı (auth ile tutarlı olmalı)
-axios.defaults.baseURL = "https://connections-api.goit.global/";
-
 // Tüm kişiler
 export const fetchContacts = createAsyncThunk(
   "contacts/fetchAll",
