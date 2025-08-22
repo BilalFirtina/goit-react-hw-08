@@ -3,15 +3,15 @@ import "./App.module.css";
 import { Routes, Route } from "react-router-dom";
 import Layout from "../Layout/Layout";
 import RestrictedRoute from "../RestrictedRoute";
-import Registration from "../../pages/Registration/Registration";
+import Registration from "../../pages/RegistrationPage/Registration";
 import { useDispatch, useSelector } from "react-redux";
 import { selectIsRefreshing } from "../../redux/auth/selectors";
 import { refreshUser } from "../../redux/auth/operations";
 import PrivateRoute from "../PrivateRoute";
 
 const HomePage = lazy(() => import("../../pages/Home/Home"));
-const Login = lazy(() => import("../../pages/Login/Login"));
-const Contacts = lazy(() => import("../../pages/Contacts/Contacts"));
+const Login = lazy(() => import("../../pages/LoginPage/Login"));
+const Contacts = lazy(() => import("../../pages/ContactsPage/Contacts"));
 function App() {
   const dispatch = useDispatch();
   const isRefreshing = useSelector(selectIsRefreshing);
