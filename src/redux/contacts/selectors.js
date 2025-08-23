@@ -1,10 +1,10 @@
 import { createSelector } from "@reduxjs/toolkit";
-import { selectFilter } from "../filters/selectors";
+import { selectNameFilter } from "../filters/selectors";
 
 export const selectContacts = (state) => state.contacts.items;
 
 export const selectFilteredContacts = createSelector(
-  [selectContacts, selectFilter],
+  [selectContacts, selectNameFilter],
   (contacts, query) => {
     const q = (query || "").trim().toLowerCase();
     if (!q) return contacts;

@@ -4,7 +4,7 @@ import {
   addContact,
   deleteContact,
 } from "../contacts/contactsOps";
-import { selectFilter } from "../filters/filtersSlice";
+import { selectNameFilter } from "../filters/filtersSlice";
 
 const initialState = {
   items: [],
@@ -59,8 +59,8 @@ export const selectContacts = (state) => state.contacts.items;
 export const selectContactsLoading = (state) => state.contacts.loading;
 export const selectContactsError = (state) => state.contacts.error;
 
-export const selectFilteredContacts = createSelector(
-  [selectContacts, selectFilter],
+export const selectNameFilteredContacts = createSelector(
+  [selectContacts, selectNameFilter],
   (contacts, nameFilter) =>
     contacts.filter((contact) =>
       contact.name.toLowerCase().includes(nameFilter.toLowerCase())
